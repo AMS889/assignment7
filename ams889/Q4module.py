@@ -12,6 +12,6 @@ def q4output(nMax, threshold):
     fractal=gridSpace() #uses default parameters of xSamples=ySamples=500, xMin=-2, xMax=1, yMin=-1.5, yMax=1.5
     fractalIteration = fractal.iteration(nMax)
     boolMask = np.abs(fractalIteration) < threshold
-    plt.imshow(boolMask, extent=[-2, 1, -1.5, 1.5])
+    plt.imshow(boolMask.T, extent=[-2, 1, -1.5, 1.5])
     plt.gray()
     plt.savefig('mandelbrot.png')
